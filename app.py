@@ -12,12 +12,5 @@ def index():
 
 	return render_template("index.html", smiles=smiles)
 
-
-@app.route("/result", methods=["POST"])
-def result():
-	smiles = request.form.get("smiles")
-	return render_template("layout.html", smiles=smiles)
-
-
 if __name__ == '__main__':
     app.run(debug=True)
