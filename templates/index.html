@@ -3,14 +3,19 @@
 <head>
 	<title>Molecule Structure representation</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://3Dmol.org/build/3Dmol-min.js" async></script>
+     <script src="http://3Dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
-	<h1>Enter smiles string</h1>
-	<form action="{{ url_for('index')}}" method="POST">
-	    <input name="smiles" type="text" placeholder="smiles string">
-	    <button>Submit</button>
-	    <p>You entered {{smiles}}</p>
-	</form>
+	<div class="background-box">
+		<h1>Enter smiles string</h1>
+		<form action="{{ url_for('index')}}" method="POST">
+			<input name="smiles" type="text" placeholder="smiles string">
+			<button>Submit</button>
+			<p style="font-weight: bold;">You entered</p><p>{{smiles}}</p>
+			<div style="height: 500px; width: 600px; position: relative; align-self: center;" class='viewer_3Dmoljs background-box' data-href='/static/molecule.sdf' data-type='sdf' data-backgroundcolor='0xffffff' data-style='stick'></div>
+		</form>
+	</div>
 </body>
 </html>

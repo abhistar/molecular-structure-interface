@@ -8,16 +8,18 @@ html,body {
 	width: 100%;
 	overflow-y: auto;
 	overflow-x: auto;
+	background-color: #a6a1e6;
 }
 a {
 	text-decoration: none;
 }
 
 .background-box {
-	margin: 10px;
+	width: 50%;
+	margin:10px auto;
 	padding: 10px;
 	background-color: white;
-	opacity: 80%;
+	opacity: 100%;
 	overflow: auto;
 }
 
